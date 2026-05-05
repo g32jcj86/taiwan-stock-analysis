@@ -1,0 +1,9 @@
+* text=auto
+
+*.whl binary
+*.pyd binary
+*.dll binary
+*.exe binary
+*.lib binary
+*.pkl binary
+*.db binary

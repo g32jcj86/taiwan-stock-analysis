@@ -1,0 +1,43 @@
+{
+  "name": "taiwan-stock-analysis",
+  "version": "0.2.0",
+  "description": "用於台股篩選、yfinance 即時資料、個股報告、投組分析、壓力測試與觀察名單的 Codex 外掛。",
+  "author": {
+    "name": "Local Workspace",
+    "email": "",
+    "url": ""
+  },
+  "homepage": "",
+  "repository": "",
+  "license": "MIT",
+  "keywords": [
+    "taiwan-stocks",
+    "finance",
+    "portfolio",
+    "screening",
+    "watchlist"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "台股分析",
+    "shortDescription": "台股篩選、個股報告、投組分析與壓力測試。",
+    "longDescription": "使用四個篩選引擎與七個預設策略篩選台股與 yfinance 相容股票；透過外掛內建 yfinance 抓取報價與歷史股價，產生個股報告，分析交易紀錄、損益、投組結構與健康度，執行壓力測試並管理觀察名單。",
+    "developerName": "本機工作區",
+    "category": "財務金融",
+    "capabilities": [
+      "股票篩選",
+      "個股報告",
+      "投組分析",
+      "壓力測試",
+      "觀察名單"
+    ],
+    "defaultPrompt": [
+      "使用台股分析篩選被低估的台股。",
+      "使用台股分析檢查我的交易紀錄與投組損益。",
+      "使用台股分析對我的投資組合做壓力測試。"
+    ],
+    "brandColor": "#0F766E",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/logo.svg"
+  }
+}

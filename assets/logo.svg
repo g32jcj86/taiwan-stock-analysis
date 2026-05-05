@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" role="img" aria-label="Taiwan Stock Analysis logo">
+  <rect width="360" height="120" rx="18" fill="#0F766E"/>
+  <g transform="translate(24 28)">
+    <path d="M4 54h68" stroke="#D9F99D" stroke-width="7" stroke-linecap="round"/>
+    <path d="M10 46l16-18 14 12 24-30" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="65" cy="10" r="7" fill="#FACC15"/>
+  </g>
+  <text x="112" y="52" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700">Taiwan Stock</text>
+  <text x="112" y="82" fill="#D9F99D" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600">Analysis</text>
+</svg>
