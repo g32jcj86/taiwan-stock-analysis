@@ -2,4 +2,4 @@ interface:
   display_name: "台股分析"
   short_description: "台股篩選、個股報告、投組分析、壓力測試與觀察名單"
   brand_color: "#0F766E"
-  default_prompt: "使用 $taiwan-stock-analysis 篩選台股、產生個股報告或檢查投資組合。"
+  default_prompt: "使用 $taiwan-stock-analysis 以反錨定模式篩選台股、產生個股報告或檢查投資組合；機構目標價與分析師評等只能最後對照，不得影響排名或結論。"

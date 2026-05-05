@@ -12,6 +12,32 @@ Use the most authoritative current source available for the question.
 
 When a source may have changed recently, verify current data before producing conclusions.
 
+## Anti-Anchoring Source Classes
+
+Use source classes to prevent institutional target prices from contaminating analysis.
+
+### Model Inputs
+
+These may affect scores, rankings, valuation ranges, entry triggers, stop-loss levels, and risk/reward:
+
+- official filings, monthly revenue, financial statements, dividends, and company announcements
+- TWSE, TPEx, and MOPS market or disclosure data
+- price, volume, volatility, liquidity, and historical return data
+- verified institutional flow data such as foreign investor, investment trust, and dealer net buy/sell
+- company guidance, order, capacity, product cycle, and industry demand indicators when the source and date are clear
+
+### Reference-Only Sources
+
+These must not affect scores, rankings, valuation ranges, entry triggers, stop-loss levels, or risk/reward. Use them only in a final comparison section after the independent result is complete:
+
+- broker target prices
+- analyst ratings, upgrades, downgrades, or recommendation changes
+- institutional price calls
+- media headline targets or social media narratives
+- market consensus fair value
+
+When a reference-only source conflicts with the model, report the gap and possible reasons instead of adjusting the model to match the outside target.
+
 ## Local yfinance Install
 
 This plugin expects `yfinance` to be available in the plugin-local `vendor/python` directory. The helper script inserts that directory into `sys.path` automatically.

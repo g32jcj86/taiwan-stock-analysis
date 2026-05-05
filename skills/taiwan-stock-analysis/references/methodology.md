@@ -1,5 +1,27 @@
 # Taiwan Stock Analysis Methodology
 
+## Anti-Anchoring Mode
+
+Anti-anchoring mode is enabled by default. Build valuation, ranking, entry conditions, stop-loss logic, target zones, and risk/reward conclusions before reading or using external consensus.
+
+Do not use these as model inputs unless the user explicitly asks to follow consensus:
+
+- broker target prices
+- analyst ratings or recommendation changes
+- institutional price calls
+- media headline targets
+- market consensus fair value
+
+Allowed workflow:
+
+1. Score and rank candidates using fundamentals, valuation, price/volume, liquidity, risk, and verified event data.
+2. Write the independent conclusion, including fair-value range or short-term trade plan.
+3. Add an optional "External Consensus Check" at the end.
+4. In that section, compare external target prices or ratings against the independent result, explain the gap, and flag possible crowding or narrative risk.
+5. Do not revise scores, rankings, target zones, or recommendations after seeing external consensus.
+
+If external consensus is unavailable, state that it was not used and do not infer it from news tone.
+
 ## Screening Engines
 
 Use four engines and report both total score and engine subscores.
@@ -30,7 +52,7 @@ Useful inputs:
 
 - `revenue_growth`, `eps_growth`, `monthly_revenue_yoy`
 - margin trend, backlog, capacity expansion, demand cycle
-- analyst revisions when available
+- company guidance, order trend, product cycle, and industry demand indicators when available
 
 Red flags: growth from low-quality acquisitions, channel inventory build, falling orders, and growth with collapsing margins.
 
@@ -56,6 +78,23 @@ Red flags: low liquidity, crowded positioning, unresolved litigation, trading su
 | `small-cap-liquidity-aware` | Find overlooked names | Valuation and growth with liquidity penalty |
 | `risk-defensive` | Find lower drawdown names | Quality, volatility, leverage, stable cash flow |
 
+## Hybrid Undervaluation And Short-Term Opportunity
+
+Use this when the user asks for "被低估且短線有機會", "綜合型", or similar screening.
+
+Default score weights:
+
+| Engine | Weight | Notes |
+| --- | ---: | --- |
+| Valuation | 35% | Historical and peer discount, FCF yield, dividend support, downside valuation |
+| Quality and growth | 25% | Revenue trend, margin resilience, ROE/ROA, balance-sheet safety, catalyst quality |
+| Momentum and volume | 25% | 5/20/60-day relative strength, breakout quality, volume expansion, liquidity |
+| Risk control | 15% | Volatility, drawdown, concentration, event risk, liquidity, overextension |
+
+Output independent ranking first. External target prices, analyst ratings, and headline-driven calls are reference-only and must not affect these weights or the final rank.
+
+For short-term candidates, avoid "cheap but falling" names unless there is a verified reversal signal. Avoid "strong but crowded" names when the risk/reward depends mainly on target-price narratives.
+
 ## Individual Report Checklist
 
 1. Identify the stock, market, data date, and source reliability.
@@ -64,7 +103,8 @@ Red flags: low liquidity, crowded positioning, unresolved litigation, trading su
 4. Evaluate valuation using at least two methods when data permits.
 5. List catalysts and risks with likely timing.
 6. Build bull, base, and bear scenarios.
-7. End with data gaps, assumptions, and monitoring triggers.
+7. Write the independent conclusion before viewing external consensus.
+8. End with data gaps, assumptions, monitoring triggers, and optional external consensus check.
 
 ## Portfolio Health Checks
 
